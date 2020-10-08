@@ -1,0 +1,35 @@
+<div class="list-wrapper">
+  <div class="list-panel">
+    <table class="list-header">
+      <tr>
+        <th colspan="1" rowspan="2" (click)="onSortChange('account')" class="account-header click-header sort-by">
+          <div>Account</div>
+        </th>
+        <th colspan="1" class="click-header sort-by" (click)="onSortChange('balance')" >
+          <div class="account-balance-header">Available Cash</div>
+          <div class="account-balance-header sub-heading">Today's Change</div>
+        </th>
+      </tr>
+    </table>
+    <table class="list-table">
+      <tr  *ngFor="let row of dataSource">
+        <td class="list-table-row account-name-column">{{row.name}}</td>
+        <td class="list-table-row">
+          <p class="account-balance-column">{{row.balance | currency}}</p>
+          <p class="account-balance-column-sub"
+             [ngClass]="{
+              'account-change-positive': row.pctChange > 0,
+              'account-change-none':  row.pctChange == 0,
+              'account-change-negative':  row.pctChange < 0
+              }">
+              {{row.pctChange}}% / {{row.changeAmount | currency}}
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table *ngIf="!fetchComplete">
+      <tr><td colspan="2" class="list-table-footer load-button" (click)="onLoadMore()">Load More</td></tr>
+    </table>
+  </div>
+</div>
+

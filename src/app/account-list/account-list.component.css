@@ -1,0 +1,164 @@
+/*
+  account-list-component CSS below.
+ */
+
+.list-wrapper {
+  background-color: #3f8dc2;
+  height: 100%;
+  font-family: "Microsoft Sans Serif", sans-serif;
+  font-size: 24px;
+  padding: 15px 10px 10px;
+}
+
+.click-header {
+  cursor: pointer;
+}
+
+.list-header {
+  width: 100%;
+}
+
+
+.list-table {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.list-table-row {
+  height: 90px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.list-table-footer {
+  background-color: #ffffff;
+  color: #3574ac;
+  width: 100%;
+  height: 90px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.list-panel {
+  background-color: #efefef;
+}
+
+.account-header {
+  background-color: #efefef;
+  color: black;
+  width: 50%;
+  height: 30px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-right: 0;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.account-balance-header {
+  background-color: #f7f7f7;
+  color: black;
+  height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  text-align: right;
+}
+
+.account-name-column {
+  background-color: #ffffff;
+  color: #3574ac;
+  width: 50%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.account-balance-column {
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: right;
+  padding: 0 15px 5px;
+  margin: 2px;
+}
+
+.account-balance-column-sub {
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: right;
+  padding: 0 15px 5px;
+  margin: 2px;
+}
+
+.sub-heading {
+  color: grey;
+  padding-top: 0;
+}
+
+.load-button {
+  background-color: white;
+  color: #3574ac;
+  text-align: center;
+  cursor: pointer;
+}
+
+.account-change-negative {
+  color: red;
+}
+
+.account-change-none {
+  color: grey;
+}
+
+.account-change-positive {
+  color: green;
+}
+
+/*
+  Table CSS below
+ */
+table {
+  width: 100%;
+}
+
+td,
+th {
+  overflow: hidden;
+  text-align: left;
+  vertical-align: middle;
+}
+th {
+  background-color: #f7f7f7;
+  font-weight: 400;
+}
+th a,
+td a {
+  display: block;
+  width: 100%;
+}
+th.sort-by {
+  padding-right: 18px;
+  position: relative;
+}
+th.sort-by:before,
+th.sort-by:after {
+  border: 4px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  right: 5px;
+  top: 50%;
+  position: absolute;
+  width: 0;
+}
+th.sort-by:before {
+  border-bottom-color: #666;
+  margin-top: -9px;
+}
+th.sort-by:after {
+  border-top-color: #666;
+  margin-top: 1px;
+}
