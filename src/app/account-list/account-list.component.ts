@@ -39,13 +39,13 @@ export class AccountListComponent implements OnInit {
       switch (columnName) {
         case ACCOUNT:
           this.accountSortDirection = this.accountSortDirection === ASCENDING ? DESCENDING : ASCENDING;
-          const accountSortObject = { sortColumn: 'account', sortDirection: this.accountSortDirection};
+          const accountSortObject = { sortColumn: ACCOUNT, sortDirection: this.accountSortDirection};
           const accountBlockSize = !this.fetchComplete ? INITIAL_BLOCK_SIZE : undefined;
           this.dataSource = this.accountService.fetchData(accountBlockSize, accountSortObject);
           break;
         case BALANCE:
           this.balanceSortDirection = this.balanceSortDirection === ASCENDING ? DESCENDING : ASCENDING;
-          const balanceSortObject = { sortColumn: 'balance', sortDirection: this.balanceSortDirection};
+          const balanceSortObject = { sortColumn: BALANCE, sortDirection: this.balanceSortDirection};
           const balanceBlockSize = !this.fetchComplete ? INITIAL_BLOCK_SIZE : undefined;
           this.dataSource = this.accountService.fetchData(balanceBlockSize, balanceSortObject);
           break;
