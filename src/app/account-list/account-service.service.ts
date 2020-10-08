@@ -46,14 +46,14 @@ export class AccountServiceService {
       switch (sortColumn) {
         case ACCOUNT:
           const sortedNameData = ACCOUNT_DATA.sort((a, b) => {
-                const name1: number = +a.name.substr(5, 4);
-                const name2: number = +b.name.substr(5, 4);
-                if (sortDirection === ASCENDING) {
+            const name1: number = +a.name.substr(5, 4);
+            const name2: number = +b.name.substr(5, 4);
+            if (sortDirection === ASCENDING) {
               return name1 - name2;
             } else if (sortDirection === DESCENDING) {
               return name2 - name1;
             }
-          });
+        });
           return !!blockSize ? sortedNameData.slice(0, blockSize) : sortedNameData.slice();
         case BALANCE:
           const sortedBalanceData = ACCOUNT_DATA.sort((a, b) =>
